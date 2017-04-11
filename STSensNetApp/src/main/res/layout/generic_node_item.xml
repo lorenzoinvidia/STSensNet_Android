@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017  STMicroelectronics – All rights reserved
+  ~ The STMicroelectronics corporate logo is a trademark of STMicroelectronics
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification,
+  ~ are permitted provided that the following conditions are met:
+  ~
+  ~ - Redistributions of source code must retain the above copyright notice, this list of conditions
+  ~   and the following disclaimer.
+  ~
+  ~ - Redistributions in binary form must reproduce the above copyright notice, this list of
+  ~   conditions and the following disclaimer in the documentation and/or other materials provided
+  ~   with the distribution.
+  ~
+  ~ - Neither the name nor trademarks of STMicroelectronics International N.V. nor any other
+  ~   STMicroelectronics company nor the names of its contributors may be used to endorse or
+  ~   promote products derived from this software without specific prior written permission.
+  ~
+  ~ - All of the icons, pictures, logos and other images that are provided with the source code
+  ~   in a directory whose title begins with st_images may only be used for internal purposes and
+  ~   shall not be redistributed to any third party or modified in any way.
+  ~
+  ~ - Any redistributions in binary form shall not include the capability to display any of the
+  ~   icons, pictures, logos and other images that are provided with the source code in a directory
+  ~   whose title begins with st_images.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
+  ~ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+  ~ AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER
+  ~ OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  ~ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  ~ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  ~ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  ~ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+  ~ OF SUCH DAMAGE.
+  -->
+
+<!-- there are some problem centering the text for api 18 and andorid 4.3
+    https://code.google.com/p/android/issues/detail?id=59368
+-->
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/remoteIdLabel"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/tempIconDesc"
+            app:srcCompat="@drawable/temperature_icon"
+            android:id="@+id/tempIcon"
+            android:layout_below="@+id/remoteIdLabel"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/icon_margin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/temperatureValLabel"
+            android:layout_alignTop="@id/tempIcon"
+            android:layout_alignBottom="@id/tempIcon"
+            android:layout_toEndOf="@id/tempIcon"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/pressIconDesc"
+            app:srcCompat="@drawable/pressure_icon"
+            android:layout_gravity="center"
+            android:id="@+id/pressureIcon"
+            android:layout_margin="@dimen/icon_margin"
+            android:layout_below="@+id/remoteIdLabel"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pressureValLabel"
+            android:gravity="center_vertical"
+            android:layout_alignTop="@id/pressureIcon"
+            android:layout_alignBottom="@id/pressureIcon"
+            android:layout_toEndOf="@id/pressureIcon"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/humIconDesc"
+            app:srcCompat="@drawable/humidity_icon"
+            android:layout_gravity="center"
+            android:id="@+id/humIcon"
+            android:layout_below="@+id/tempIcon"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/icon_margin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/humidityValLabel"
+            android:layout_alignTop="@id/humIcon"
+            android:layout_alignBottom="@id/humIcon"
+            android:layout_toEndOf="@id/humIcon"
+            android:gravity="center_vertical"/>
+
+
+        <ImageView
+            android:id="@+id/ledIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/ledIconDesc"
+            app:srcCompat="@drawable/led_off_icon"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/icon_margin"
+            android:layout_below="@+id/pressureIcon"
+            android:layout_centerHorizontal="true"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ledSwitch"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/icon_margin"
+            android:layout_alignTop="@id/ledIcon"
+            android:layout_alignBottom="@id/ledIcon"
+            android:layout_toEndOf="@id/ledIcon"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ledStatusLabel"
+            android:layout_alignTop="@id/ledIcon"
+            android:layout_alignBottom="@id/ledIcon"
+            android:layout_toEndOf="@id/ledSwitch"
+            android:text="@string/ledOffStatus"
+            android:gravity="center_vertical"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/humIcon"
+            android:id="@+id/motionDetectionLayout"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true">
+            <ImageView
+                android:id="@+id/motionIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/motion_detection_icon"
+                android:layout_margin="@dimen/icon_margin"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/motionDetectionStatusLabel"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/motionDetectionLayout"
+            android:id="@+id/proximityLayout"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/proximity_icon"
+                android:id="@+id/proximityIcon"
+                android:layout_margin="@dimen/icon_margin"/>
+            <android.support.v7.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchEnableDistance"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/proximityValue"
+                android:gravity="center_vertical"/>
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/proximityBar"
+                android:layout_margin="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/proximityLayout"
+            android:id="@+id/micLevelLayout"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/volume_icon"
+                android:layout_margin="@dimen/icon_margin"/>
+            <android.support.v7.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchEnableMic"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/micLevelValue"
+                android:gravity="center_vertical"/>
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/micLevelBar"
+                android:layout_margin="8dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+
+    <!--
+    if we drop the support to android kk we can use android:drawableStart with vector images and move
+    to contraintlayout
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/pressureValLabel"
+                tools:text="pressure"
+                android:drawableStart="@drawable/pressure_icon"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="16dp"
+                card_view:layout_constraintRight_toRightOf="parent"
+                card_view:layout_constraintLeft_toLeftOf="@+id/verticalHalf"
+                android:layout_marginStart="8dp"
+                card_view:layout_constraintHorizontal_bias="0.0"
+                card_view:layout_constraintTop_toTopOf="@+id/temperatureValLabel" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/temperatureValLabel"
+                tools:text="temperature"
+                android:drawableStart="@drawable/temperature_icon"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                card_view:layout_constraintRight_toLeftOf="@+id/verticalHalf"
+                android:layout_marginEnd="8dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/remoteIdLabel" />
+
+            <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="229dp"
+                android:id="@+id/verticalHalf"
+                android:orientation="vertical"
+                card_view:layout_constraintGuide_percent="0.5096953"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="184dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/humidityValLabel"
+                card_view:layout_constraintTop_toBottomOf="@+id/temperatureValLabel"
+                android:layout_marginStart="16dp"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                card_view:layout_constraintRight_toLeftOf="@+id/verticalHalf"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/humidity_icon"
+                android:gravity="center_vertical"
+                tools:text="humidity" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                card_view:srcCompat="@drawable/led_off_icon"
+                android:id="@+id/ledIcon"
+                card_view:layout_constraintLeft_toLeftOf="@+id/verticalHalf"
+                android:layout_marginTop="8dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/pressureValLabel"
+                android:layout_marginStart="8dp" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ledSwitch"
+                android:layout_marginStart="8dp"
+                card_view:layout_constraintLeft_toRightOf="@+id/ledIcon"
+                card_view:layout_constraintTop_toTopOf="@+id/ledIcon"
+                card_view:layout_constraintBottom_toBottomOf="@+id/ledIcon" />
+
+            <TextView
+                android:text="@string/ledOffStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ledStatusLabel"
+                card_view:layout_constraintTop_toTopOf="@+id/ledIcon"
+                card_view:layout_constraintBottom_toBottomOf="@+id/ledIcon"
+                android:layout_marginEnd="16dp"
+                card_view:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="8dp"
+                card_view:layout_constraintLeft_toRightOf="@+id/ledSwitch"
+                tools:text="ledStatus" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/motionDetectionStatusLabel"
+                card_view:layout_constraintTop_toBottomOf="@+id/humidityValLabel"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                card_view:layout_constraintRight_toLeftOf="@+id/verticalHalf"
+                android:drawableStart="@drawable/motion_detection_icon"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                card_view:layout_constraintHorizontal_bias="0.7"
+                tools:text="lastEvent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/remoteIdLabel"
+                android:layout_marginStart="8dp"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="16dp"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    -->

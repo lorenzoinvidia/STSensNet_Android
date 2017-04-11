@@ -1,0 +1,2 @@
+include ':BlueSTSDK',':BlueSTSDKGui', ':STSensNetApp'
+project(':BlueSTSDK').projectDir = new File('BlueSTSDK/BlueSTSDK')

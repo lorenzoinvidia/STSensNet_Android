@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ~ Copyright (c) 2017  STMicroelectronics – All rights reserved
+  ~ The STMicroelectronics corporate logo is a trademark of STMicroelectronics
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification,
+  ~ are permitted provided that the following conditions are met:
+  ~
+  ~ - Redistributions of source code must retain the above copyright notice, this list of conditions
+  ~   and the following disclaimer.
+  ~
+  ~ - Redistributions in binary form must reproduce the above copyright notice, this list of
+  ~   conditions and the following disclaimer in the documentation and/or other materials provided
+  ~   with the distribution.
+  ~
+  ~ - Neither the name nor trademarks of STMicroelectronics International N.V. nor any other
+  ~   STMicroelectronics company nor the names of its contributors may be used to endorse or
+  ~   promote products derived from this software without specific prior written permission.
+  ~
+  ~ - All of the icons, pictures, logos and other images that are provided with the source code
+  ~   in a directory whose title begins with st_images may only be used for internal purposes and
+  ~   shall not be redistributed to any third party or modified in any way.
+  ~
+  ~ - Any redistributions in binary form shall not include the capability to display any of the
+  ~   icons, pictures, logos and other images that are provided with the source code in a directory
+  ~   whose title begins with st_images.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
+  ~ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+  ~ AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER
+  ~ OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  ~ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  ~ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  ~ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  ~ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+  ~ OF SUCH DAMAGE.
+  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg3960"
+   viewBox="0 0 24 24"
+   height="24"
+   width="24">
+  <defs
+     id="defs3962" />
+  <metadata
+     id="metadata3965">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-1028.3622)"
+     id="layer1">
+    <g
+       style="fill:#000000"
+       id="g3708"
+       transform="matrix(0.22493393,0,0,-0.22493393,2.0529717,1041.5987)">
+      <path
+         d="m 0,0 c 0.986,0.564 1.813,1.396 2.362,2.435 l 21.033,-2.34 c 0.923,-3.414 1.685,-5.974 4.36,-8.368 L 13.492,-30.857 c -0.849,0.268 -1.711,0.404 -2.569,0.404 -0.506,0 -1,-0.053 -1.483,-0.136 L 0,0 Z m 17.811,47.149 c 0.429,-0.105 0.874,-0.168 1.333,-0.174 L 31.655,15.395 C 27.164,13.484 24.01,9.454 23.223,4.623 L 2.847,6.888 C 2.478,8.255 1.658,9.41 0.571,10.209 l 17.24,36.94 z M 82.262,22.677 C 82.123,22.264 82.017,21.834 81.95,21.389 L 49.573,9.376 c -2.55,4.464 -7.216,7.209 -12.333,7.209 -0.411,0 -0.805,-0.045 -1.199,-0.098 L 23.301,48.65 c 0.035,0.033 0.064,0.069 0.097,0.103 L 82.262,22.677 Z M 17.279,-33.254 31.52,-10.711 c 4.698,-2.099 9.948,-1.475 14.02,1.481 l 30.406,-21.246 c -0.566,-1.278 -0.87,-2.596 -0.939,-3.931 L 19.543,-38.21 c -0.195,1.849 -0.977,3.569 -2.264,4.956 m 61.221,6.46 -29.739,20.781 c 1.803,2.472 2.752,5.335 2.752,8.324 0,0.917 -0.107,1.845 -0.335,2.879 l 31.497,11.69 c 0.98,-1.887 2.703,-3.228 4.726,-3.732 l -2.548,-36.907 c -2.381,-0.3 -4.585,-1.342 -6.353,-3.035 m 8.753,3.085 2.531,36.666 c 3.778,0.305 6.76,3.469 6.76,7.322 0,4.055 -3.301,7.355 -7.358,7.355 -2.361,0 -4.453,-1.103 -5.791,-2.846 L 24.72,50.78 c 0.258,0.663 0.401,1.372 0.401,2.101 0,3.257 -2.65,5.908 -5.906,5.908 -3.256,0 -5.905,-2.651 -5.905,-5.908 0,-1.919 0.923,-3.621 2.345,-4.701 L -1.596,11.218 c -0.461,0.111 -0.94,0.172 -1.433,0.172 -3.362,0 -6.098,-2.738 -6.098,-6.103 0,-3.363 2.736,-6.098 6.098,-6.098 0.258,0 0.511,0.021 0.762,0.052 l 9.432,-30.563 c -2.902,-1.403 -4.913,-4.368 -4.913,-7.801 0,-4.782 3.889,-8.672 8.671,-8.672 4.274,0 7.825,3.109 8.534,7.183 l 55.683,3.82 c 0.881,-5.358 5.531,-9.461 11.134,-9.461 6.229,0 11.297,5.066 11.297,11.295 0,5.9 -4.546,10.751 -10.318,11.249"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path3710" />
+    </g>
+  </g>
+</svg>

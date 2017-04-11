@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017  STMicroelectronics – All rights reserved
+  ~ The STMicroelectronics corporate logo is a trademark of STMicroelectronics
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification,
+  ~ are permitted provided that the following conditions are met:
+  ~
+  ~ - Redistributions of source code must retain the above copyright notice, this list of conditions
+  ~   and the following disclaimer.
+  ~
+  ~ - Redistributions in binary form must reproduce the above copyright notice, this list of
+  ~   conditions and the following disclaimer in the documentation and/or other materials provided
+  ~   with the distribution.
+  ~
+  ~ - Neither the name nor trademarks of STMicroelectronics International N.V. nor any other
+  ~   STMicroelectronics company nor the names of its contributors may be used to endorse or
+  ~   promote products derived from this software without specific prior written permission.
+  ~
+  ~ - All of the icons, pictures, logos and other images that are provided with the source code
+  ~   in a directory whose title begins with st_images may only be used for internal purposes and
+  ~   shall not be redistributed to any third party or modified in any way.
+  ~
+  ~ - Any redistributions in binary form shall not include the capability to display any of the
+  ~   icons, pictures, logos and other images that are provided with the source code in a directory
+  ~   whose title begins with st_images.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
+  ~ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+  ~ AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER
+  ~ OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  ~ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  ~ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  ~ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  ~ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+  ~ OF SUCH DAMAGE.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="60dp"
+        android:height="60dp"
+        android:viewportWidth="60"
+        android:viewportHeight="60">
+
+    <group>
+        <path
+            android:fillColor="#39a9dc"
+            android:pathData="M45.8809,14.0953 C45.813,14.3337,45.9424,14.5786,46.1751,14.6452
+                L48.4287,15.0509 C48.671,15.117,48.9114,14.9894,48.9799,14.7497
+                C49.0459,14.5183,48.9171,14.2735,48.6832,14.2042 L46.4283,13.8049
+                C46.1943,13.7344,45.9463,13.8665,45.8809,14.0953 M31.8716,40.3968
+                C31.6396,40.9237,31.8876,41.5499,32.4177,41.7768 L37.0588,43.1933
+                C37.5895,43.4292,38.2048,43.1818,38.4388,42.6485
+                C38.6695,42.121,38.4241,41.498,37.8908,41.2724 L33.2503,39.8527
+                C32.7221,39.6264,32.1004,39.8693,31.8716,40.3968 M39.5829,42.8228
+                C39.3509,43.3529,39.5983,43.9682,40.129,44.1983 L45.3483,45.8033
+                C45.8758,46.0315,46.495,45.7892,46.7257,45.263
+                C46.9564,44.7303,46.711,44.1086,46.1841,43.8747 L40.9603,42.2716
+                C40.4277,42.0415,39.8124,42.2851,39.5829,42.8228 M47.6641,41.7537
+                L54.8261,17.5398 L39.5829,14.8285 L32.7894,37.5414 L47.6641,41.7537 Z
+                M28.6264,40.8301 C28.6578,40.734,28.8085,40.2206,29.0847,39.2809
+                C29.3667,38.3298,29.7161,37.1292,30.134,35.6666
+                C30.5576,34.202,31.0332,32.5753,31.5684,30.771
+                C32.0953,28.9635,32.635,27.1566,33.1734,25.3331 L33.24,25.0973
+                C33.706,23.557,34.1406,22.0668,34.5655,20.6337
+                C34.9898,19.1979,35.3725,17.9109,35.7096,16.7725
+                C36.048,15.6329,36.3269,14.7067,36.5486,13.9876
+                C36.7794,13.2595,36.9178,12.8473,36.9742,12.7448
+                C37.1088,12.4538,37.2832,12.1987,37.5036,11.9808
+                C37.7177,11.7513,37.9677,11.5924,38.2427,11.5045
+                C38.5061,11.3738,38.7593,11.3097,39.0201,11.2776
+                C39.2746,11.2642,39.5041,11.252,39.7015,11.2571
+                C39.7784,11.252,40.0655,11.2898,40.5751,11.3501
+                C41.0815,11.411,41.7256,11.4904,42.4883,11.5968
+                C43.2594,11.7026,44.1106,11.8269,45.0528,11.9853
+                C45.9969,12.1352,46.9417,12.2929,47.8967,12.4442
+                C49.2023,12.6852,50.465,12.9275,51.6764,13.1697
+                C52.8885,13.4159,53.9864,13.6364,54.9498,13.8254
+                C55.7023,13.9953,56.3285,14.1401,56.8323,14.2459
+                C57.3367,14.3574,57.6841,14.4356,57.8623,14.4959 L57.9033,14.5068
+                L57.9648,14.5625 C58.3635,14.7067,58.7109,14.9369,58.9968,15.2451
+                C59.2705,15.5554,59.5076,15.9028,59.6819,16.288
+                C59.8524,16.6802,59.9556,17.0892,59.9858,17.5244
+                C60.0184,17.9557,59.9954,18.3595,59.9114,18.7403
+                C59.8749,18.8569,59.7313,19.3723,59.4672,20.2978
+                C59.2096,21.2176,58.8724,22.3982,58.4545,23.8391
+                C58.0456,25.2819,57.5713,26.9035,57.0335,28.7065
+                C56.4996,30.5069,55.958,32.3503,55.4036,34.2212
+                C54.8453,36.0967,54.3101,37.9356,53.7877,39.7437
+                C53.2686,41.5525,52.7949,43.1702,52.3661,44.6105
+                C51.9367,46.0494,51.5944,47.223,51.3188,48.1588
+                C51.0444,49.0907,50.8861,49.6163,50.8509,49.724 L50.8445,49.7663
+                C50.6214,50.4983,50.3176,51.0533,49.9189,51.436
+                C49.5158,51.8225,49.0825,52.091,48.628,52.2538
+                C48.1602,52.4179,47.6993,52.4961,47.2205,52.4961
+                C46.7526,52.4942,46.3482,52.457,46.0142,52.3865
+                C45.9008,52.375,45.6707,52.3199,45.3387,52.2212
+                C44.999,52.1231,44.583,51.9962,44.0779,51.8436 L43.4197,51.6546
+                C42.8268,51.4719,42.1768,51.2783,41.4795,51.063
+                C40.7808,50.8367,40.0578,50.6072,39.306,50.3585
+                C39.0368,50.2547,38.7682,50.1701,38.5061,50.0842
+                C38.242,50.0073,37.9741,49.9156,37.71,49.8105
+                C36.6614,49.4497,35.6436,49.0863,34.6584,48.7023
+                C33.6714,48.3229,32.7811,47.9825,31.9863,47.6691
+                C31.1902,47.3614,30.5358,47.0999,30.025,46.8839
+                C29.5097,46.6705,29.2296,46.525,29.1757,46.4654
+                C28.7418,46.1609,28.4156,45.8552,28.2079,45.5418
+                C28.0041,45.2316,27.8727,44.9239,27.8111,44.6201
+                C27.7483,44.3137,27.7451,44.0112,27.7906,43.7144
+                C27.847,43.4119,27.9066,43.1388,27.9816,42.8876 L28.1867,42.196 L28.197,42.1627
+                M28.3707,41.5749 L28.4002,41.473 L28.4123,41.4403" />
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M39.5828,14.8283 L32.7893,37.5418 L47.6639,41.7541 L54.8259,17.5395
+                L39.5828,14.8283 Z" />
+        <path
+            android:strokeColor="#39a9dc"
+            android:strokeWidth="1"
+            android:pathData="M4.17005,29.1339 L27.2444,29.1339" />
+        <path
+            android:fillColor="#39a9dc"
+            android:pathData="M5.45196,32.2936 L0.0,29.1465 L5.45196,25.9982 L5.45196,32.2936 Z" />
+        <path
+            android:fillColor="#39a9dc"
+            android:pathData="M25.9625,32.2936 L31.4144,29.1465 L25.9625,25.9982 L25.9625,32.2936 Z" />
+    </group>
+    <path
+        android:fillColor="#39a9dc"
+        android:pathData="M17.8422,26.3156 L16.9459,26.3156 L16.9459,25.7578
+            Q16.5597,26.0916,16.1401,26.2775 Q15.7206,26.4634,15.2295,26.4634
+            Q14.276,26.4634,13.7135,25.7292 Q13.1557,24.995,13.1557,23.6935
+            Q13.1557,23.0165,13.3464,22.4873 Q13.5418,21.9581,13.8708,21.5863
+            Q14.195,21.2239,14.6241,21.0332 Q15.0579,20.8425,15.5204,20.8425
+            Q15.9399,20.8425,16.2641,20.9331 Q16.5883,21.0189,16.9459,21.2049
+            L16.9459,18.8974 L17.8422,18.8974 L17.8422,26.3157 Z M16.9459,25.0046
+            L16.9459,21.9486 Q16.5835,21.7865,16.2975,21.7245
+            Q16.0114,21.6625,15.6729,21.6625 Q14.9197,21.6625,14.5001,22.187
+            Q14.0806,22.7114,14.0806,23.6744 Q14.0806,24.6232,14.4048,25.119
+            Q14.729,25.61,15.4441,25.61 Q15.8255,25.61,16.2164,25.4432
+            Q16.6074,25.2716,16.9459,25.0046 Z" />
+</vector>

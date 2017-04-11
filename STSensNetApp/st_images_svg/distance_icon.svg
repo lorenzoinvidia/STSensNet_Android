@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ~ Copyright (c) 2017  STMicroelectronics – All rights reserved
+  ~ The STMicroelectronics corporate logo is a trademark of STMicroelectronics
+  ~
+  ~ Redistribution and use in source and binary forms, with or without modification,
+  ~ are permitted provided that the following conditions are met:
+  ~
+  ~ - Redistributions of source code must retain the above copyright notice, this list of conditions
+  ~   and the following disclaimer.
+  ~
+  ~ - Redistributions in binary form must reproduce the above copyright notice, this list of
+  ~   conditions and the following disclaimer in the documentation and/or other materials provided
+  ~   with the distribution.
+  ~
+  ~ - Neither the name nor trademarks of STMicroelectronics International N.V. nor any other
+  ~   STMicroelectronics company nor the names of its contributors may be used to endorse or
+  ~   promote products derived from this software without specific prior written permission.
+  ~
+  ~ - All of the icons, pictures, logos and other images that are provided with the source code
+  ~   in a directory whose title begins with st_images may only be used for internal purposes and
+  ~   shall not be redistributed to any third party or modified in any way.
+  ~
+  ~ - Any redistributions in binary form shall not include the capability to display any of the
+  ~   icons, pictures, logos and other images that are provided with the source code in a directory
+  ~   whose title begins with st_images.
+  ~
+  ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
+  ~ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+  ~ AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER
+  ~ OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  ~ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  ~ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  ~ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  ~ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+  ~ OF SUCH DAMAGE.
+  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 60 60.000001"
+   height="60"
+   width="60">
+  <defs
+     id="defs4">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3350">
+      <path
+         d="M 0,100 100,100 100,0 0,0 0,100 Z"
+         id="path3352" />
+    </clipPath>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-992.3622)"
+     id="layer1">
+    <g
+       id="g3344"
+       transform="matrix(0.64095425,0,0,-0.64095425,-1.5985398,1054.5052)">
+      <g
+         id="g3346">
+        <g
+           id="g3348"
+           clip-path="url(#clipPath3350)">
+          <g
+             id="g3354"
+             transform="translate(74.0762,74.9629)">
+            <path
+               d="m 0,0 c -0.106,-0.372 0.096,-0.754 0.459,-0.858 l 3.516,-0.633 c 0.378,-0.103 0.753,0.096 0.86,0.47 0.103,0.361 -0.098,0.743 -0.463,0.851 L 0.854,0.453 C 0.489,0.563 0.102,0.357 0,0 m -21.857,-41.035 c -0.362,-0.822 0.025,-1.799 0.852,-2.153 l 7.241,-2.21 c 0.828,-0.368 1.788,0.018 2.153,0.85 0.36,0.823 -0.023,1.795 -0.855,2.147 l -7.24,2.215 c -0.824,0.353 -1.794,-0.026 -2.151,-0.849 m 12.031,-3.785 c -0.362,-0.827 0.024,-1.787 0.852,-2.146 l 8.143,-2.504 c 0.823,-0.356 1.789,0.022 2.149,0.843 0.36,0.831 -0.023,1.801 -0.845,2.166 l -8.15,2.501 c -0.831,0.359 -1.791,-0.021 -2.149,-0.86 m 12.608,1.668 11.174,37.778 -23.782,4.23 -10.599,-35.436 23.207,-6.572 z m -29.702,1.441 c 0.049,0.15 0.284,0.951 0.715,2.417 0.44,1.484 0.985,3.357 1.637,5.639 0.661,2.285 1.403,4.823 2.238,7.638 0.822,2.82 1.664,5.639 2.504,8.484 l 0.104,0.368 c 0.727,2.403 1.405,4.728 2.068,6.964 0.662,2.24 1.259,4.248 1.785,6.024 0.528,1.778 0.963,3.223 1.309,4.345 0.36,1.136 0.576,1.779 0.664,1.939 0.21,0.454 0.482,0.852 0.826,1.192 0.334,0.358 0.724,0.606 1.153,0.743 0.411,0.204 0.806,0.304 1.213,0.354 0.397,0.021 0.755,0.04 1.063,0.032 0.12,0.008 0.568,-0.051 1.363,-0.145 0.79,-0.095 1.795,-0.219 2.985,-0.385 C -4.09,3.733 -2.762,3.539 -1.292,3.292 0.181,3.058 1.655,2.812 3.145,2.576 5.182,2.2 7.152,1.822 9.042,1.444 10.933,1.06 12.646,0.716 14.149,0.421 15.323,0.156 16.3,-0.07 17.086,-0.235 c 0.787,-0.174 1.329,-0.296 1.607,-0.39 l 0.064,-0.017 0.096,-0.087 c 0.622,-0.225 1.164,-0.584 1.61,-1.065 0.427,-0.484 0.797,-1.026 1.069,-1.627 0.266,-0.612 0.427,-1.25 0.474,-1.929 0.051,-0.673 0.015,-1.303 -0.116,-1.897 -0.057,-0.182 -0.281,-0.986 -0.693,-2.43 -0.402,-1.435 -0.928,-3.277 -1.58,-5.525 -0.638,-2.251 -1.378,-4.781 -2.217,-7.594 -0.833,-2.809 -1.678,-5.685 -2.543,-8.604 -0.871,-2.926 -1.706,-5.795 -2.521,-8.616 -0.81,-2.822 -1.549,-5.346 -2.218,-7.593 -0.67,-2.245 -1.204,-4.076 -1.634,-5.536 -0.428,-1.454 -0.675,-2.274 -0.73,-2.442 l -0.01,-0.066 C 7.396,-56.795 6.922,-57.661 6.3,-58.258 5.671,-58.861 4.995,-59.28 4.286,-59.534 3.556,-59.79 2.837,-59.912 2.09,-59.912 c -0.73,0.003 -1.361,0.061 -1.882,0.171 -0.177,0.018 -0.536,0.104 -1.054,0.258 -0.53,0.153 -1.179,0.351 -1.967,0.589 l -1.027,0.295 c -0.925,0.285 -1.939,0.587 -3.027,0.923 -1.09,0.353 -2.218,0.711 -3.391,1.099 -0.42,0.162 -0.839,0.294 -1.248,0.428 -0.412,0.12 -0.83,0.263 -1.242,0.427 -1.636,0.563 -3.224,1.13 -4.761,1.729 -1.54,0.592 -2.929,1.123 -4.169,1.612 -1.242,0.48 -2.263,0.888 -3.06,1.225 -0.804,0.333 -1.241,0.56 -1.325,0.653 -0.677,0.475 -1.186,0.952 -1.51,1.441 -0.318,0.484 -0.523,0.964 -0.619,1.438 -0.098,0.478 -0.103,0.95 -0.032,1.413 0.088,0.472 0.181,0.898 0.298,1.29 l 0.32,1.079 0.016,0.052 m 0.271,0.917 0.046,0.159 0.019,0.051"
+               style="fill:#39a9dc;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path3356" />
+          </g>
+          <g
+             id="g3358"
+             transform="translate(64.25,73.8193)">
+            <path
+               d="M 0,0 -10.599,-35.437 12.608,-42.009 23.782,-4.23 0,0 Z"
+               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path3360" />
+          </g>
+          <g
+             id="g3362"
+             transform="translate(9,51.5)">
+            <path
+               d="M 0,0 36,0"
+               style="fill:none;stroke:#39a9dc;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               id="path3364" />
+          </g>
+          <g
+             id="g3366"
+             transform="translate(11,46.5703)">
+            <path
+               d="M 0,0 -8.506,4.91 0,9.822 0,0 Z"
+               style="fill:#39a9dc;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path3368" />
+          </g>
+          <g
+             id="g3370"
+             transform="translate(43,46.5703)">
+            <path
+               d="M 0,0 8.506,4.91 0,9.822 0,0 Z"
+               style="fill:#39a9dc;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path3372" />
+          </g>
+        </g>
+      </g>
+      <g
+         id="text3374"
+         style="font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:15.23340034px;font-family:'HelveticaNeueLT Std Cn';-inkscape-font-specification:HelveticaNeueLTStd-Cn;writing-mode:lr-tb;fill:#39a9dc;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         transform="matrix(1,0,0,-1,22.2158,55.897)">
+        <path
+           id="path3396"
+           style=""
+           d="m 8.1150585,0 -1.3983786,0 0,-0.8702675 Q 6.1141871,-0.34959464 5.4596269,-0.05950547 4.8050667,0.2305837 4.0389338,0.2305837 q -1.4876368,0 -2.3653425,-1.1454803 -0.87026745,-1.1454803 -0.87026745,-3.1761045 0,-1.0562221 0.29752735,-1.8818605 0.3049655,-0.8256384 0.8182002,-1.4058167 0.5057965,-0.565302 1.175233,-0.8628293 0.6768748,-0.2975274 1.3983786,-0.2975274 0.6545602,0 1.1603567,0.1413255 0.5057965,0.1338873 1.0636602,0.4239765 l 0,-3.600081 1.3983786,0 0,11.573814 z m -1.3983786,-2.0455005 0,-4.7678758 Q 6.151378,-7.0662746 5.7050869,-7.162971 q -0.446291,-0.096696 -0.974402,-0.096696 -1.1752331,0 -1.8297932,0.8182003 -0.6545602,0.8182002 -0.6545602,2.3207133 0,1.4801986 0.5057965,2.2537697 0.5057965,0.7661329 1.6215241,0.7661329 0.5950547,0 1.2049857,-0.2603364 0.6099311,-0.2677746 1.1380421,-0.6843129 z" />
+      </g>
+    </g>
+  </g>
+</svg>
