@@ -81,8 +81,9 @@ public class EnvironmentalRemoteNode extends RemoteNode{
     }
 
     public void setHumidity(float humidity) {
-        if(!Float.isNaN(humidity))
+        if(!Float.isNaN(humidity)){
             this.mHumidity = humidity;
+        }
     }
 
     public @Nullable Boolean getLed() {

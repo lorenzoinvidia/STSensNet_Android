@@ -39,9 +39,9 @@
 <!-- there are some problem centering the text for api 18 and andorid 4.3
     https://code.google.com/p/android/issues/detail?id=59368
 -->
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="4dp"
@@ -49,194 +49,421 @@
     app:contentPadding="8dp">
 
     <RelativeLayout
+        android:id="@+id/nodeRelativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/remoteIdLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"/>
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:backgroundTintMode="screen" />
 
+        <TextView
+            android:id="@+id/nodeStatusValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/remoteIdLabel"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/holo_red_dark" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/tempIconDesc"
-            app:srcCompat="@drawable/temperature_icon"
             android:id="@+id/tempIcon"
-            android:layout_below="@+id/remoteIdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_margin="@dimen/icon_margin"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/temperatureValLabel"
-            android:layout_alignTop="@id/tempIcon"
-            android:layout_alignBottom="@id/tempIcon"
-            android:layout_toEndOf="@id/tempIcon"
-            android:gravity="center_vertical"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/pressIconDesc"
-            app:srcCompat="@drawable/pressure_icon"
-            android:layout_gravity="center"
-            android:id="@+id/pressureIcon"
+            android:layout_below="@+id/nodeStatusValue"
             android:layout_margin="@dimen/icon_margin"
-            android:layout_below="@+id/remoteIdLabel"
-            android:layout_centerHorizontal="true"/>
+            android:contentDescription="@string/tempIconDesc"
+            app:srcCompat="@drawable/temperature_icon" />
 
         <TextView
+            android:id="@+id/temperatureValLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tempIcon"
+            android:layout_alignTop="@id/tempIcon"
+            android:layout_toEndOf="@id/tempIcon"
+            android:gravity="center_vertical" />
+
+        <ImageView
+            android:id="@+id/pressureIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nodeStatusValue"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/icon_margin"
+            android:contentDescription="@string/pressIconDesc"
+            app:srcCompat="@drawable/pressure_icon" />
+
+        <TextView
             android:id="@+id/pressureValLabel"
-            android:gravity="center_vertical"
-            android:layout_alignTop="@id/pressureIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignBottom="@id/pressureIcon"
-            android:layout_toEndOf="@id/pressureIcon"/>
+            android:layout_alignTop="@id/pressureIcon"
+            android:layout_toEndOf="@id/pressureIcon"
+            android:gravity="center_vertical" />
 
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/humIconDesc"
-            app:srcCompat="@drawable/humidity_icon"
-            android:layout_gravity="center"
             android:id="@+id/humIcon"
-            android:layout_below="@+id/tempIcon"
-            android:layout_alignParentStart="true"
-            android:layout_margin="@dimen/icon_margin"/>
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tempIcon"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/icon_margin"
+            android:contentDescription="@string/humIconDesc"
+            app:srcCompat="@drawable/humidity_icon" />
+
+        <TextView
             android:id="@+id/humidityValLabel"
-            android:layout_alignTop="@id/humIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignBottom="@id/humIcon"
+            android:layout_alignTop="@id/humIcon"
             android:layout_toEndOf="@id/humIcon"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical" />
 
 
         <ImageView
             android:id="@+id/ledIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/ledIconDesc"
-            app:srcCompat="@drawable/led_off_icon"
+            android:layout_alignStart="@+id/pressureIcon"
+            android:layout_alignTop="@+id/humidityValLabel"
             android:layout_gravity="center"
-            android:layout_margin="@dimen/icon_margin"
-            android:layout_below="@+id/pressureIcon"
-            android:layout_centerHorizontal="true"/>
+            android:layout_marginLeft="@dimen/icon_margin"
+            android:layout_marginRight="@dimen/icon_margin"
+            android:contentDescription="@string/ledIconDesc"
+            app:srcCompat="@drawable/led_off_icon" />
 
         <android.support.v7.widget.SwitchCompat
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/ledSwitch"
-            android:visibility="gone"
-            android:layout_marginEnd="@dimen/icon_margin"
-            android:layout_alignTop="@id/ledIcon"
-            android:layout_alignBottom="@id/ledIcon"
-            android:layout_toEndOf="@id/ledIcon"
-            android:gravity="center"/>
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ledStatusLabel"
-            android:layout_alignTop="@id/ledIcon"
             android:layout_alignBottom="@id/ledIcon"
-            android:layout_toEndOf="@id/ledSwitch"
-            android:text="@string/ledOffStatus"
-            android:gravity="center_vertical"/>
+            android:layout_alignTop="@id/ledIcon"
+            android:layout_marginEnd="@dimen/icon_margin"
+            android:layout_toEndOf="@id/ledIcon"
+            android:gravity="center"
+            android:visibility="gone" />
 
+        <TextView
+            android:id="@+id/ledStatusLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ledIcon"
+            android:layout_alignTop="@id/ledIcon"
+            android:layout_toEndOf="@id/ledSwitch"
+            android:gravity="center_vertical"
+            android:text="@string/ledOffStatus" />
 
         <LinearLayout
+            android:id="@+id/motionDetectionLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/humIcon"
-            android:id="@+id/motionDetectionLayout"
-            android:gravity="center_vertical"
-            android:visibility="visible"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="true">
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/humIcon"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
             <ImageView
                 android:id="@+id/motionIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/motion_detection_icon"
-                android:layout_margin="@dimen/icon_margin"/>
+                android:layout_margin="@dimen/icon_margin"
+                app:srcCompat="@drawable/motion_detection_icon" />
+
             <TextView
+                android:id="@+id/motionDetectionStatusLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/motionDetectionStatusLabel"
                 android:gravity="center_vertical" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/memsLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
             android:layout_below="@id/motionDetectionLayout"
-            android:id="@+id/proximityLayout"
             android:gravity="center_vertical"
             android:visibility="visible"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="true">
+            android:weightSum="1">
+
             <ImageView
+                android:id="@+id/accelerationIcon"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="@dimen/icon_margin"
+                android:layout_weight="0.02"
+                app:srcCompat="@drawable/acceleration_icon" />
+
+            <TableLayout
+                android:id="@+id/tableAgm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/proximity_icon"
-                android:id="@+id/proximityIcon"
-                android:layout_margin="@dimen/icon_margin"/>
+                android:layout_weight="0.02">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switchEnableAcc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/accelerationValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switchEnableGyro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/gyroscopeValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switchEnableMag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/magnetometerValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <ImageView
+                android:id="@+id/sFusionIcon"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="70dp"
+                app:srcCompat="@mipmap/demo_sensors_fusion" />
+
             <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switchEnableSFusion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/switchEnableDistance"/>
+                android:paddingStart="7dp" />
+
+            <TableLayout
+                android:id="@+id/sFusionTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.02">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/sFusionQIValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/sFusionQJValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/sFusionQKValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/sFusionQSValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cubeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false"
+            android:layout_below="@id/memsLayout"
+            android:orientation="horizontal">
+
+            <TableLayout
+                android:id="@+id/glSurfaceLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.opengl.GLSurfaceView
+                        android:id="@+id/glSurface"
+                        android:layout_width="wrap_content"
+                        android:layout_height="350dip"
+                        android:layout_alignParentStart="false" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/resetButton"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RESET" />
+                </TableRow>
+
+            </TableLayout>
+
             <TextView
+                android:id="@+id/notSupported"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/plotLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cubeLayout"
+            android:orientation="horizontal">
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/graph"
+                android:layout_width="match_parent"
+                android:layout_height="400dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/proximityLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/plotLayout"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/proximityIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/icon_margin"
+                app:srcCompat="@drawable/proximity_icon" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switchEnableDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
                 android:id="@+id/proximityValue"
-                android:gravity="center_vertical"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" />
 
             <ProgressBar
+                android:id="@+id/proximityBar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/proximityBar"
                 android:layout_margin="8dp" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/micLevelLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/proximityLayout"
-            android:id="@+id/micLevelLayout"
-            android:gravity="center_vertical"
-            android:visibility="visible"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="true">
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/proximityLayout"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/volume_icon"
-                android:layout_margin="@dimen/icon_margin"/>
+                android:layout_margin="@dimen/icon_margin"
+                app:srcCompat="@drawable/volume_icon" />
+
             <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switchEnableMic"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/switchEnableMic"/>
+                android:layout_height="wrap_content" />
+
             <TextView
+                android:id="@+id/micLevelValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/micLevelValue"
-                android:gravity="center_vertical"/>
+                android:gravity="center_vertical" />
 
             <ProgressBar
+                android:id="@+id/micLevelBar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/micLevelBar"
                 android:layout_margin="8dp" />
+
+
         </LinearLayout>
+
 
     </RelativeLayout>
 

@@ -41,6 +41,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.st.BlueSTSDK.Node;
 import com.st.SensNet.demos.RemoteNodeUtils.data.RemoteNode;
 
 /**
@@ -59,7 +60,6 @@ public class RemoteNodeViewHolder extends RecyclerView.ViewHolder {
     public RemoteNodeViewHolder(View itemView, TextView nodeName) {
         super(itemView);
         mNodeName=nodeName;
-
     }
 
     /**

@@ -40,11 +40,14 @@ package com.st.SensNet;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.view.View;
+import android.widget.CompoundButton;
 
 import com.st.BlueSTSDK.Node;
 import com.st.BlueSTSDK.gui.demos.DemoFragment;
 import com.st.SensNet.demos.GenericRemoteNodeFragment;
 
+import com.st.SensNet.R;
 /**
  * display all the demo available for the node
  */
@@ -80,6 +83,7 @@ public class DemosActivity extends com.st.BlueSTSDK.gui.DemosActivity{
     }
 
 
+
     /**
      * disable license manager
      * @return false
@@ -88,6 +92,8 @@ public class DemosActivity extends com.st.BlueSTSDK.gui.DemosActivity{
     protected boolean enableLicenseManager() {
         return false;
     }
+
+
 
     /**
      * disable fwUpgrade
