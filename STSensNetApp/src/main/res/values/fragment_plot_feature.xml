@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
   ~ Copyright (c) 2017  STMicroelectronics – All rights reserved
   ~ The STMicroelectronics corporate logo is a trademark of STMicroelectronics
   ~
@@ -33,48 +34,54 @@
   ~ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
   ~ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
   ~ OF SUCH DAMAGE.
--->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.st.SensNet">
+  -->
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:logo="@drawable/app_logo"
-        android:supportsRtl="true">
-        <activity
-            android:name=".MainActivity"
-            android:configChanges="keyboardHidden|screenSize"
-            android:theme="@style/FullscreenTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<resources>
+    <array name="dataSetColor">
+        <item>#FF0000FF</item>  <!-- blue -->
+        <item>#FFFF0000</item>  <!-- red -->
+        <item>#FF00FF00</item>  <!-- green -->
+        <item>#FF000000</item>  <!-- black -->
+        <item>#FF00FFFF</item>  <!-- cyan -->
+        <item>#FFFF00FF</item>  <!-- pink -->
+    </array>
+    <string name="startPlotButton">Start Plot</string>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".NodeListActivity"
-            android:label="@string/title_activity_node_list">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.st.SensNet.MainActivity" />
-        </activity>
-        <activity
-            android:name=".DemosActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.st.SensNet.NodeListActivity" />
-        </activity>
-        <activity
-            android:name=".AboutActivity"
-            android:label="@string/title_activity_about"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.st.SensNet.MainActivity" />
-        </activity>
-    </application>
+    <string name="xAxisLabel">Time (ms)</string>
+    <string name="setPlotLength">Plot Length</string>
 
-</manifest>
+    <!-- size of the plot name -->
+    <dimen name="plot_title_font_size">18dp</dimen>
+    <dimen name="plot_margin_top">20dp</dimen>
+    <dimen name="plot_margin_left">25dp</dimen>
+    <dimen name="plot_margin_bottom">40dp</dimen>
+
+    <dimen name="domain_label_font_size">15dp</dimen>
+    <dimen name="range_label_font_size">15dp</dimen>
+
+    <dimen name="legend_text_font_size">15dp</dimen>
+    <!-- width for 10 char -> legendTextFontSize*10-->
+    <dimen name="legend_box_width">150dp</dimen>
+
+    <dimen name="legend_box_height">30dp</dimen>
+
+    <dimen name="legend_box_padding">5dp</dimen>
+    <dimen name="legend_icon_size">13dp</dimen>
+    <dimen name="range_tick_label_font_size">10dp</dimen>
+    <dimen name="domain_tick_label_font_size">10dp</dimen>
+
+    <string name="selectMaxSamples">Select the time scale</string>
+    <string-array name="availableMaxSamplesString">
+        <item>1s</item>
+        <item>5s</item>
+        <item>10s</item>
+        <item>30s</item>
+    </string-array>
+    <integer-array name="availableMaxSamplesValues">
+        <item>1000</item>
+        <item>5000</item>
+        <item>10000</item>
+        <item>30000</item>
+    </integer-array>
+
+</resources>

@@ -38,6 +38,7 @@
 package com.st.SensNet.demos;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
@@ -70,7 +71,6 @@ public class GenericRemoteNodeFragment extends DemoFragmentWithCommand implement
         GenericRemoteNodeViewHolder.GenericRemoteNodeViewCallback {
 
     private static final String DISCOVERED_NODE = GenericRemoteNodeFragment.class.getName()+".DISCOVERED_NODE";
-
     /**
      * collection of remoteNodes
      */
@@ -86,6 +86,10 @@ public class GenericRemoteNodeFragment extends DemoFragmentWithCommand implement
     private GenericRemoteFeature mRemoteFeature;
     private Integer mMicLevelEnabledId;
     private Integer mProximityEnabledId;
+    private Integer mAccelerationEnabledId;
+    private Integer mGyroscopeEnabledId;
+    private Integer mMagnetometerEnabledId;
+    private Integer mSFusionEnabledId;
 
     /**
      * update the data received by the remote node
@@ -101,6 +105,19 @@ public class GenericRemoteNodeFragment extends DemoFragmentWithCommand implement
             node.setDetectMovement(GenericRemoteFeature.getLastMotionDetection(sample));
             node.setMicLevel(GenericRemoteFeature.getMicLevel(sample));
             node.setLux(GenericRemoteFeature.getLuminosity(sample));
+            node.setAccelerationX(GenericRemoteFeature.getAccelerationX(sample));
+            node.setAccelerationY(GenericRemoteFeature.getAccelerationY(sample));
+            node.setAccelerationZ(GenericRemoteFeature.getAccelerationZ(sample));
+            node.setGyroscopeX(GenericRemoteFeature.getGyroscopeX(sample));
+            node.setGyroscopeY(GenericRemoteFeature.getGyroscopeY(sample));
+            node.setGyroscopeZ(GenericRemoteFeature.getGyroscopeZ(sample));
+            node.setMagnetometerX(GenericRemoteFeature.getMagnetometerX(sample));
+            node.setMagnetometerY(GenericRemoteFeature.getMagnetometerY(sample));
+            node.setMagnetometerZ(GenericRemoteFeature.getMagnetometerZ(sample));
+            node.setStatus(GenericRemoteFeature.getStatus(sample));
+            node.setSFusionQI(GenericRemoteFeature.getSFusionQI(sample));
+            node.setSFusionQJ(GenericRemoteFeature.getSFusionQJ(sample));
+            node.setSFusionQK(GenericRemoteFeature.getSFusionQK(sample));
             node.setUnknownData(GenericRemoteFeature.getUnknownData(sample));
     }//updateNode
 
@@ -111,13 +128,12 @@ public class GenericRemoteNodeFragment extends DemoFragmentWithCommand implement
         @Override
         public void onUpdate(Feature f, Feature.Sample sample) {
             final int id = GenericRemoteFeature.getNodeId(sample);
-
             final int index = mRemoteNodeDatas.indexOfKey(id);
+
             final GenericRemoteNode node = index>=0 ? mRemoteNodeDatas.valueAt(index) :
                     new GenericRemoteNode(id);
 
             updateNode(node,sample);
-
             GenericRemoteNodeFragment.this.updateGui(new Runnable() {
                 @Override
                 public void run() {
@@ -206,7 +222,6 @@ public class GenericRemoteNodeFragment extends DemoFragmentWithCommand implement
             mRemoteFeature.changeSwitchStatus(node.getId(),newStatus );
     }
 
-
     /** switch off all the switch for the notification */
     private void disablePrevNotification(){
         if(mProximityEnabledId!=null){
@@ -216,6 +231,22 @@ public class GenericRemoteNodeFragment extends DemoFragmentWithCommand implement
         if(mMicLevelEnabledId!=null){
             GenericRemoteNode temp = mRemoteNodeDatas.get(mMicLevelEnabledId);
             changeMicNotification(temp,false);
+        }
+        if(mAccelerationEnabledId!=null){
+            GenericRemoteNode temp = mRemoteNodeDatas.get(mAccelerationEnabledId);
+            changeAccNotification(temp,false);
+        }
+        if(mGyroscopeEnabledId!=null){
+            GenericRemoteNode temp = mRemoteNodeDatas.get(mGyroscopeEnabledId);
+            changeGyroNotification(temp,false);
+        }
+        if(mMagnetometerEnabledId!=null){
+            GenericRemoteNode temp = mRemoteNodeDatas.get(mMagnetometerEnabledId);
+            changeMagNotification(temp,false);
+        }
+        if(mSFusionEnabledId!=null){
+            GenericRemoteNode temp = mRemoteNodeDatas.get(mSFusionEnabledId);
+            changeMSFNotification(temp,false);
         }
     }
 
@@ -253,7 +284,143 @@ public class GenericRemoteNodeFragment extends DemoFragmentWithCommand implement
         }//if feature!=null
     }
 
-    /**change the notificaiton state, and update the gui as consequence */
+    /**change the notification state, and update the gui as consequence */
+    private void changeAccNotification(GenericRemoteNode node,boolean newState){
+        final int nodeId = node.getId();
+        mRemoteFeature.enableAcceleration(nodeId, newState);
+        node.setAccelerationEnabled(newState);
+        if(newState) {
+            mAccelerationEnabledId = nodeId;
+        }else
+            mAccelerationEnabledId=null;
+
+        updateGui(new Runnable() {
+            @Override
+            public void run() {
+                mAdapter.notifyItemChanged(mRemoteNodeDatas.indexOfKey(nodeId));
+            }
+        });
+    }
+
+    @Override
+    public void onAccelerationSwitchChange(GenericRemoteNode node, boolean newStatus) {
+        if(mRemoteFeature!=null) {
+            if(newStatus) {
+                if(mAccelerationEnabledId!=null && mAccelerationEnabledId==node.getId())
+                    return;
+                disablePrevNotification();
+                changeAccNotification(node,true);
+            }else {
+                if(mAccelerationEnabledId==null || mAccelerationEnabledId!=node.getId())
+                    return;
+                changeAccNotification(node,false);
+            }//if-else
+        }//if feature!=null
+    }
+
+    /**change the notification state, and update the gui as consequence */
+    private void changeGyroNotification(GenericRemoteNode node,boolean newState){
+        final int nodeId = node.getId();
+        mRemoteFeature.enableGyroscope(nodeId, newState);
+        node.setGyroscopeEnabled(newState);
+        if(newState) {
+            mGyroscopeEnabledId = nodeId;
+        }else
+            mGyroscopeEnabledId=null;
+
+        updateGui(new Runnable() {
+            @Override
+            public void run() {
+                mAdapter.notifyItemChanged(mRemoteNodeDatas.indexOfKey(nodeId));
+            }
+        });
+    }
+
+    @Override
+    public void onGyroscopeSwitchChange(GenericRemoteNode node, boolean newStatus) {
+        if(mRemoteFeature!=null) {
+            if(newStatus) {
+                if(mGyroscopeEnabledId!=null && mGyroscopeEnabledId==node.getId())
+                    return;
+                disablePrevNotification();
+                changeGyroNotification(node,true);
+            }else {
+                if(mGyroscopeEnabledId==null || mGyroscopeEnabledId!=node.getId())
+                    return;
+                changeGyroNotification(node,false);
+            }//if-else
+        }//if feature!=null
+    }
+
+    /**change the notification state, and update the gui as consequence */
+    private void changeMagNotification(GenericRemoteNode node,boolean newState){
+        final int nodeId = node.getId();
+        mRemoteFeature.enableMagnetometer(nodeId, newState);
+        node.setMagnetometerEnabled(newState);
+        if(newState) {
+            mMagnetometerEnabledId = nodeId;
+        }else
+            mMagnetometerEnabledId=null;
+
+        updateGui(new Runnable() {
+            @Override
+            public void run() {
+                mAdapter.notifyItemChanged(mRemoteNodeDatas.indexOfKey(nodeId));
+            }
+        });
+    }
+
+    @Override
+    public void onMagnetometerSwitchChange(GenericRemoteNode node, boolean newStatus) {
+        if(mRemoteFeature!=null) {
+            if(newStatus) {
+                if(mMagnetometerEnabledId!=null && mMagnetometerEnabledId==node.getId())
+                    return;
+                disablePrevNotification();
+                changeMagNotification(node,true);
+            }else {
+                if(mMagnetometerEnabledId==null || mMagnetometerEnabledId!=node.getId())
+                    return;
+                changeMagNotification(node,false);
+            }//if-else
+        }//if feature!=null
+    }
+
+    /**change the notification state, and update the gui as consequence */
+    private void changeMSFNotification(GenericRemoteNode node,boolean newState){
+        final int nodeId = node.getId();
+        mRemoteFeature.enableSFusion(nodeId, newState);
+        node.setSFusionEnabled(newState);
+        if(newState) {
+            mSFusionEnabledId = nodeId;
+        }else
+            mSFusionEnabledId=null;
+
+        updateGui(new Runnable() {
+            @Override
+            public void run() {
+                mAdapter.notifyItemChanged(mRemoteNodeDatas.indexOfKey(nodeId));
+            }
+        });
+    }
+
+    @Override
+    public void onSFusionSwitchChange(GenericRemoteNode node, boolean newStatus) {
+        if(mRemoteFeature!=null) {
+            if(newStatus) {
+                if(mSFusionEnabledId!=null && mSFusionEnabledId==node.getId())
+                    return;
+                disablePrevNotification();
+                changeMSFNotification(node,true);
+            }else {
+                if(mSFusionEnabledId==null || mSFusionEnabledId!=node.getId())
+                    return;
+                changeMSFNotification(node,false);
+            }//if-else
+        }//if feature!=null
+    }
+
+    /**change the notification state, and update the gui as consequence */
     private void changeMicNotification(GenericRemoteNode node,boolean newState){
         final int nodeId  = node.getId();
 

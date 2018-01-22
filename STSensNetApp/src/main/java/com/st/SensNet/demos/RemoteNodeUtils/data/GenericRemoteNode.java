@@ -54,9 +54,24 @@ public class GenericRemoteNode extends EnvironmentalRemoteNode {
     private boolean mProximityEnabled;
     private short mMicLevel;
     private boolean mMicLevelEnabled;
-
     private @Nullable Date mDetectMovement;
-
+    private int mAccelerationX;
+    private int mAccelerationY;
+    private int mAccelerationZ;
+    private boolean mAccelerationEnabled;
+    private float mGyroscopeX;
+    private float mGyroscopeY;
+    private float mGyroscopeZ;
+    private boolean mGyroscopeEnabled;
+    private int mMagnetometerX;
+    private int mMagnetometerY;
+    private int mMagnetometerZ;
+    private boolean mMagnetometerEnabled;
+    private int mStatus;
+    private float mSFusionQI;
+    private float mSFusionQJ;
+    private float mSFusionQK;
+    private boolean mSFusionEnabled;
     private byte[] mUnknownData;
 
     public GenericRemoteNode(int id){
@@ -64,15 +79,36 @@ public class GenericRemoteNode extends EnvironmentalRemoteNode {
         mProximity=-1;
         mMicLevel=-1;
         mDetectMovement=null;
+        mAccelerationX=-2001;
+        mAccelerationY=-2001;
+        mAccelerationZ=-2001;
+        mGyroscopeX=Float.NaN;
+        mGyroscopeY=Float.NaN;
+        mGyroscopeZ=Float.NaN;
+        mMagnetometerX=-2001;
+        mMagnetometerY=-2001;
+        mMagnetometerZ=-2001;
+        mStatus=0;
+        mSFusionQI=Float.NaN;
+        mSFusionQJ=Float.NaN;
+        mSFusionQK=Float.NaN;
         mUnknownData = null;
     }
 
 
     public boolean proximityIsEnabled(){return mProximityEnabled;}
     public boolean micIsEnabled(){return mMicLevelEnabled;}
+    public boolean accelerationIsEnabled(){return mAccelerationEnabled;}
+    public boolean gyroscopeIsEnabled(){return mGyroscopeEnabled;}
+    public boolean magnetometerIsEnabled(){return mMagnetometerEnabled;}
+    public boolean sFusionIsEnabled(){return mSFusionEnabled;}
 
     public void setProximityEnabled(boolean enabled){mProximityEnabled = enabled;}
     public void setMicEnabled(boolean enabled){mMicLevelEnabled = enabled;}
+    public void setAccelerationEnabled(boolean enabled){mAccelerationEnabled = enabled;}
+    public void setGyroscopeEnabled(boolean enabled){mGyroscopeEnabled = enabled;}
+    public void setMagnetometerEnabled(boolean enabled){mMagnetometerEnabled = enabled;}
+    public void setSFusionEnabled(boolean enabled){mSFusionEnabled = enabled;}
 
     public boolean hasProximity() {
         return  mProximity>=0;
@@ -87,8 +123,6 @@ public class GenericRemoteNode extends EnvironmentalRemoteNode {
             mProximity = proximity;
     }
 
-
-
     public boolean hasMicLevel() {
         return  mMicLevel>=0;
     }
@@ -101,6 +135,127 @@ public class GenericRemoteNode extends EnvironmentalRemoteNode {
         if(micLevel>=0) {
             mMicLevel = micLevel;
         }
+    }
+
+    public boolean hasAcceleration() {
+        return  mAccelerationX>=-2000;
+    }
+
+    public int getAccelerationX() {
+        return mAccelerationX;
+    }
+
+    public void setAccelerationX(int accelerationX) {
+        if(accelerationX>=-2000 && accelerationX<=2000)
+            mAccelerationX = accelerationX;
+    }
+
+    public int getAccelerationY() {
+        return mAccelerationY;
+    }
+
+    public void setAccelerationY(int accelerationY) {
+        if(accelerationY>=-2000 && accelerationY<=2000)
+            mAccelerationY = accelerationY;
+    }
+
+    public int getAccelerationZ() {
+        return mAccelerationZ;
+    }
+
+    public void setAccelerationZ(int accelerationZ) {
+        if(accelerationZ>=-2000 && accelerationZ<=2000)
+            mAccelerationZ = accelerationZ;
+    }
+
+    public float getGyroscopeX() {
+        return mGyroscopeX;
+    }
+
+    public void setGyroscopeX(float gyroscopeX) {
+        if(!Float.isNaN(gyroscopeX))
+            mGyroscopeX = gyroscopeX;
+    }
+
+    public float getGyroscopeY() {
+        return mGyroscopeY;
+    }
+
+    public void setGyroscopeY(float gyroscopeY) {
+        if(!Float.isNaN(gyroscopeY))
+            mGyroscopeY = gyroscopeY;
+    }
+
+    public float getGyroscopeZ() {
+        return mGyroscopeZ;
+    }
+
+    public void setGyroscopeZ(float gyroscopeZ) {
+        if(!Float.isNaN(gyroscopeZ))
+            mGyroscopeZ = gyroscopeZ;
+    }
+
+    public int getMagnetometerX() {
+        return mMagnetometerX;
+    }
+
+    public void setMagnetometerX(int magnetometerX) {
+        if(magnetometerX>=-2000 && magnetometerX<=2000)
+            mMagnetometerX = magnetometerX;
+    }
+
+    public int getMagnetometerY() {
+        return mMagnetometerY;
+    }
+
+    public void setMagnetometerY(int magnetometerY) {
+        if(magnetometerY>=-2000 && magnetometerY<=2000)
+            mMagnetometerY = magnetometerY;
+    }
+
+    public int getMagnetometerZ() {
+        return mMagnetometerZ;
+    }
+
+    public void setMagnetometerZ(int magnetometerZ) {
+        if(magnetometerZ>=-2000 && magnetometerZ<=2000)
+            mMagnetometerZ = magnetometerZ;
+    }
+
+    public int getStatus() {
+        return mStatus;
+    }
+
+    public void setStatus(int status) {
+        if(status>=0 && status<=1)
+            mStatus = status;
+    }
+
+    public float getSFusionQI() {
+        return mSFusionQI;
+    }
+
+    public void setSFusionQI(float sFusionQI) {
+        if(!Float.isNaN(sFusionQI))
+            mSFusionQI = sFusionQI;
+    }
+
+    public float getSFusionQJ() {
+        return mSFusionQJ;
+    }
+
+    public void setSFusionQJ(float sFusionQJ) {
+        if(!Float.isNaN(sFusionQJ))
+            mSFusionQJ = sFusionQJ;
+    }
+
+    public float getSFusionQK() {
+        return mSFusionQK;
+    }
+
+    public void setSFusionQK(float sFusionQK) {
+        if(!Float.isNaN(sFusionQK))
+            mSFusionQK = sFusionQK;
     }
 
     public byte[] getUnknownData() {
@@ -143,6 +298,7 @@ public class GenericRemoteNode extends EnvironmentalRemoteNode {
 
     private GenericRemoteNode(Parcel in) {
         super(in);
+
         mProximity = in.readInt();
         mProximityEnabled = in.readByte() ==0;
 
@@ -154,6 +310,24 @@ public class GenericRemoteNode extends EnvironmentalRemoteNode {
             mDetectMovement=null;
         else
             mDetectMovement = new Date(timeValue);
+
+        mAccelerationX = in.readInt();
+        mAccelerationY = in.readInt();
+        mAccelerationZ = in.readInt();
+        mAccelerationEnabled = in.readByte() ==0;
+        mGyroscopeX = in.readFloat();
+        mGyroscopeY = in.readFloat();
+        mGyroscopeZ = in.readFloat();
+        mGyroscopeEnabled = in.readByte() ==0;
+        mMagnetometerX = in.readInt();
+        mMagnetometerY = in.readInt();
+        mMagnetometerZ = in.readInt();
+        mMagnetometerEnabled = in.readByte() ==0;
+        mStatus = in.readInt();
+        mSFusionQI = in.readFloat();
+        mSFusionQJ = in.readFloat();
+        mSFusionQK = in.readFloat();
+        mSFusionEnabled = in.readByte() ==0;
 
         int unknownDataLength = in.readInt();
         if(unknownDataLength!=0) {
@@ -170,13 +344,32 @@ public class GenericRemoteNode extends EnvironmentalRemoteNode {
 
         parcel.writeInt(mProximity);
         parcel.writeByte(mProximityEnabled?(byte)0:(byte)1);
-        parcel.writeInt(mMicLevel);
-        parcel.writeByte(mMicLevelEnabled?(byte)0:(byte)1);
 
         if(mDetectMovement==null)
             parcel.writeLong(-1);
         else
             parcel.writeLong(mDetectMovement.getTime());
+
+        parcel.writeInt(mMicLevel);
+        parcel.writeByte(mMicLevelEnabled?(byte)0:(byte)1);
+
+        parcel.writeInt(mAccelerationX);
+        parcel.writeInt(mAccelerationY);
+        parcel.writeInt(mAccelerationZ);
+        parcel.writeByte(mAccelerationEnabled?(byte)0:(byte)1);
+        parcel.writeFloat(mGyroscopeX);
+        parcel.writeFloat(mGyroscopeY);
+        parcel.writeFloat(mGyroscopeZ);
+        parcel.writeByte(mGyroscopeEnabled?(byte)0:(byte)1);
+        parcel.writeInt(mMagnetometerX);
+        parcel.writeInt(mMagnetometerY);
+        parcel.writeInt(mMagnetometerZ);
+        parcel.writeByte(mMagnetometerEnabled?(byte)0:(byte)1);
+        parcel.writeInt(mStatus);
+        parcel.writeFloat(mSFusionQI);
+        parcel.writeFloat(mSFusionQJ);
+        parcel.writeFloat(mSFusionQK);
+        parcel.writeByte(mSFusionEnabled?(byte)0:(byte)1);
 
         if(mUnknownData !=null) {
             parcel.writeInt(mUnknownData.length);
